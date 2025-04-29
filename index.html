@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Result Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="hosting 21.jpg" alt="Logo" class="logo">
+    <h1 class="college-name">Your College Name</h1>
+  </div>
+</header>
+
+<main>
+  <div class="form-container">
+    <select id="mainCourseSelect" onchange="showSubCourse()">
+      <option value="">Select Course Type</option>
+      <option value="Computer">Computer</option>
+      <option value="Cutting">Cutting</option>
+    </select>
+
+    <div id="subCourseContainer" class="hidden">
+      <select id="subCourseSelect">
+        <option value="">Select Computer Course</option>
+        <option value="PGDCA">PGDCA</option>
+        <option value="ADCA">ADCA</option>
+        <option value="DCA">DCA</option>
+        <option value="BCA">BCA</option>
+      </select>
+    </div>
+
+    <input type="text" id="rollInput" placeholder="Enter Roll Number">
+    <button onclick="checkResult()">Check Result</button>
+  </div>
+
+  <div id="resultContainer" class="hidden"></div>
+
+</main>
+
+<footer>
+  <p>Contact us: contact@yourcollege.com | ‪+91-9876543210‬</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf"></script>
+
+</body>
+</html>
